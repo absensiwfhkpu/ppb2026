@@ -1,59 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Absensi WFH KPU PPB</title>
-  <link rel="icon" href="https://cdn.brandfetch.io/id4BCq6HEO/w/477/h/477/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B" type="image/x-icon">
-  <style>
-    /* Memberikan warna background di luar area aplikasi agar seperti Apps Script */
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background-color: #f3f4f6; /* Warna abu-abu muda */
-      display: flex;
-      justify-content: center;
-      font-family: sans-serif;
-    }
-
-    /* Container utama dibatasi lebarnya (Max Width) */
-    .iframe-container {
-      position: relative;
-      width: 100%;
-      max-width: 450px; /* Ukuran standar layout mobile Apps Script */
-      height: 100vh;
-      background-color: white;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Efek bayangan */
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .loader {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 1rem;
-      color: #999;
-      z-index: 10;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Absensi WFH KPU PPB</title>
+  <link rel="icon" href="https://cdn.brandfetch.io/id4BCq6HEO/w/477/h/477/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B" type="image/x-icon">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.2rem;
+      color: #666;
+      z-index: 10;
+    }
+  </style>
 </head>
 <body>
-  <div class="iframe-container">
-    <div class="loader" id="loader">Loading app...</div>
-    <iframe 
-      src="https://script.google.com/macros/s/AKfycbzAynSZ0D-pTyaP9-Jwy4pvDUIZBuHrFJNNQZegY99Iv9mtCOz9f3uZdA7Hl3vNDION6g/exec" 
-      title="Absensi WFH KPU PPB"
-      onload="document.getElementById('loader').style.display='none';"
-      allow="geolocation; camera"> </iframe>
-  </div>
+  <div class="iframe-container">
+    <div class="loader" id="loader">Loading app...</div>
+    <iframe 
+      src="https://script.google.com/macros/s/AKfycbzAynSZ0D-pTyaP9-Jwy4pvDUIZBuHrFJNNQZegY99Iv9mtCOz9f3uZdA7Hl3vNDION6g/exec" 
+      title="Absensi WFH KPU PPB"
+      onload="document.getElementById('loader').style.display='none';"
+      allowfullscreen>
+    </iframe>
+  </div>
 </body>
 </html>
