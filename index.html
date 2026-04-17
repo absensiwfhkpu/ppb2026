@@ -10,19 +10,30 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
       font-family: sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 30px;
+      box-sizing: border-box;
     }
+
     .iframe-container {
       position: relative;
-      width: 100%;
-      height: 100vh;
+      width: 480px;
+      height: 600px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
+
     iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
+
     .loader {
       position: absolute;
       top: 50%;
@@ -31,6 +42,14 @@
       font-size: 1.2rem;
       color: #666;
       z-index: 10;
+    }
+
+    /* Responsif untuk HP */
+    @media (max-width: 500px) {
+      .iframe-container {
+        width: 95vw;
+        height: 90vh;
+      }
     }
   </style>
 </head>
@@ -47,4 +66,3 @@
   </div>
 </body>
 </html>
-
